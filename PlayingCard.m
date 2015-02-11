@@ -41,17 +41,29 @@
 
 -(int)match:(NSArray *)othercards{
     int score=0;
-    if([othercards count]==1)//matching only one card
-    {
-        PlayingCard *otherCard = [othercards firstObject];
-        if(otherCard.rank ==self.rank)
-        {
-            score=4;
-        }
-        else if (otherCard.suit ==self.suit)
-        {
-            score=1;
-        }
+
+    //Create a counted set of suits of the selected cards
+    NSMutableArray *cardSuits = [NSMutableArray new];
+    for (PlayingCard *card in othercards) {
+        [cardSuits addObject:card.suit];
+    }
+    NSCountedSet *suitsCountedSet = [[NSCountedSet alloc] initWithArray:cardSuits];
+
+    //Create a counted set of raksb of the selected cards
+    NSMutableArray *cardRanks = [NSMutableArray new];
+    for (PlayingCard *card in othercards) {
+        [cardRanks addObject:[NSString stringWithFormat:@" %tu ", card.rank]];
+    }
+    NSCountedSet *ranksCountedSet = [[NSCountedSet alloc] initWithArray:cardRanks];
+    
+    //Get the score, increasing number of matches gets a bonus!
+    for (NSString *rank in ranksCountedSet)
+    {   // matching ranks gets 4
+        score += 4*([ranksCountedSet countForObject:rank]-1);
+    }
+    for (NSString *suit in suitsCountedSet)
+    {   // matching suits gets 1
+        score += 1*([suitsCountedSet countForObject:suit]-1);
     }
     return score;
 }
@@ -65,7 +77,7 @@
     return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
 }
 +(NSArray *)rankStrings{
-    return @[@"?",@"A",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
+    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
 }
 
 @end

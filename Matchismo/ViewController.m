@@ -15,7 +15,7 @@
 @property (nonatomic,strong) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeSegmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeControl;
 
 @end
 
@@ -29,6 +29,9 @@
     return _game;
 }
 
+- (IBAction)changeMatchMode:(UISegmentedControl *)sender {
+    self.game.matchNumber=sender.selectedSegmentIndex+2;
+}
 
 
 - (IBAction)touchCardButton:(UIButton *)sender {
@@ -51,6 +54,8 @@
 }
 
 -(void)updateUI{
+    [self.matchModeControl setEnabled:![self.game isStarted]];
+    
     for (UIButton *cardButton in self.cardButtons) {
         NSUInteger index = [self.cardButtons indexOfObject:cardButton]; //card index in view
         //get card at that index in game
@@ -60,7 +65,7 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                           forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+        //self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
 
     }
 }

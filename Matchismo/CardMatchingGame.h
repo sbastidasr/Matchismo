@@ -22,5 +22,10 @@
 //Game score. It is readonly for the public.
 @property(nonatomic,readonly) NSInteger score;
 
+//Game number of allowed cards to match.
+@property(nonatomic) NSInteger matchNumber;
+
+@property(nonatomic, getter=isStarted) BOOL started;
+
 
 @end
