@@ -220,7 +220,7 @@
                                     <action selector="newGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oPY-5S-MpK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movements: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-uF-d5F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-uF-d5F">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -271,6 +271,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="matchInfoLabel" destination="tdx-uF-d5F" id="GKo-pW-NEE"/>
                         <outlet property="matchModeControl" destination="3n1-eS-VMA" id="LNm-xc-5K1"/>
                         <outlet property="scoreLabel" destination="vJr-9j-Kh8" id="JHv-sc-Xc4"/>
                         <outletCollection property="cardButtons" destination="JOQ-zo-zgS" id="Gqv-Ln-q9o"/>

@@ -51,6 +51,13 @@
     return self;
 }
 
+-(NSMutableString *)matchInfo{
+    if (!_matchInfo){
+        _matchInfo=[NSMutableString stringWithString:@" "];
+    }
+    return _matchInfo;
+}
+
 static const int MISMATCH_PENALTY = 2;
 static const int MATCH_BONUS = 4;
 static const int COST_TO_CHOSE = 1;
@@ -60,31 +67,37 @@ static const int COST_TO_CHOSE = 1;
     Card *card= [self cardAtIndex:index];
     
     if (!card.isMatched){
-    if(card.isChosen)//tapping a selected card deselects it.
+    if(card.isChosen){ //tapping a selected card deselects it.
         card.chosen=NO;
-    else{ //if it was not selected
+        self.matchInfo=[NSMutableString stringWithString:@" "];
+    }
+    else { //if it was not selected
         
+        [self.matchInfo appendFormat:@"%@ ",card.contents];
         NSMutableArray *cards = [[NSMutableArray alloc]init]; //of selected cards
         [cards insertObject:card atIndex:0]; // add to array
         
         for (Card *otherCard in self.cards) { //iterate through game cards
             if(otherCard.isChosen&&!otherCard.isMatched){ //if other card was chosen and not already matched
                 [cards insertObject:otherCard atIndex:0];
-                                   if ([cards count]==self.matchNumber) {
-                         //found another selected card, check to see if they match.
-                        
-                        int matchScore =[card match:cards];
-                       // self.lastMovement=[[NSString stringWithFormat:@"Matching: %@ to %@. Match score: %d",[cards[1] contents],[cards[2] contents], matchScore]];
-                        
-                        if(matchScore){
+                if ([cards count]==self.matchNumber) { //found another selected card, check to see if they match.
+                    int matchScore =[card match:cards];
+                    if(matchScore){
                             //match!
+                            self.matchInfo=[NSMutableString stringWithString:@"Matched :"];
                             self.score+=matchScore*MATCH_BONUS;
                             for (Card *selectedCard in cards) {
                                 selectedCard.matched=YES;
+                                [self.matchInfo appendFormat:@"%@ ",selectedCard.contents];
                             }
+                            [self.matchInfo appendFormat:@"for %d points",matchScore*MATCH_BONUS];
                         }
-                        else
-                        {
+                        else{
+                            self.matchInfo=[NSMutableString stringWithString:@" "];
+                            for (Card *selectedCard in cards) {
+                                [self.matchInfo appendFormat:@"%@ ",selectedCard.contents];
+                            }
+                            [self.matchInfo appendFormat:@" do not match! lose %d points",MISMATCH_PENALTY];
                             //Mismatch, unchose last card, penalty
                             otherCard.chosen= NO;
                             self.score -= MISMATCH_PENALTY;

@@ -27,5 +27,6 @@
 
 @property(nonatomic, getter=isStarted) BOOL started;
 
+@property(nonatomic) NSMutableString* matchInfo;
 
 @end
