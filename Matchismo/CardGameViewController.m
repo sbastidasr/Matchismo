@@ -6,21 +6,13 @@
 //  Copyright (c) 2015 sbastidasr. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "PlayingCard.h"
-#import "PlayingCardDeck.h"
-#import "CardMatchingGame.h"
+#import "CardGameViewController.h"
 
-@interface ViewController ()
-@property (nonatomic,strong) CardMatchingGame *game;
-@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeControl;
-@property (weak, nonatomic) IBOutlet UILabel *matchInfoLabel;
+@interface CardGameViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CardGameViewController
 
 -(CardMatchingGame *)game
 {
@@ -84,7 +76,7 @@
 
 
 
--(Deck *)createDeck{
-    return [[PlayingCardDeck alloc]init];
+-(Deck *)createDeck{ //abstract
+    return nil;
 }
 @end
