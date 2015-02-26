@@ -12,10 +12,17 @@
 @interface CardMatchingGame()
 @property(nonatomic) NSInteger score;//make the already defined property readwrite
 @property(nonatomic) NSMutableArray *cards; //of cards. This one is related to the cards available in the UI. 12 in this case because UI has 12 dards.NOT the deck@end
+@property (nonatomic) NSInteger numberOfSelectedCards;
 @end
 
 @implementation CardMatchingGame
 
+-(id)init {
+    if (self = [super init])  {
+        self.numberOfSelectedCards = 0;
+    }
+    return self;
+}
 
 
 -(NSMutableArray *)cards{
@@ -71,10 +78,15 @@ static const int COST_TO_CHOSE = 1;
     if (!card.isMatched){
     if(card.isChosen){ //tapping a selected card deselects it.
         card.chosen=NO;
+        self.numberOfSelectedCards-=1;
         self.matchInfo=[NSMutableString stringWithString:@" "];
     }
     else { //if it was not selected
+        self.numberOfSelectedCards+=1;
         
+        if ([self.matchInfo containsString:@"Matched"]) {
+            self.matchInfo=[NSMutableString stringWithString:@" "];
+        }
         [self.matchInfo appendFormat:@"%@ ",card.contents];
         NSMutableArray *cards = [[NSMutableArray alloc]init]; //of selected cards
         [cards insertObject:card atIndex:0]; // add to array
@@ -86,30 +98,34 @@ static const int COST_TO_CHOSE = 1;
                     int matchScore =[card match:cards];
                     if(matchScore){
                             //match!
-                            self.matchInfo=[NSMutableString stringWithString:@"Matched :"];
+                        self.matchInfo=[NSMutableString stringWithString:@" "];
                             self.score+=matchScore*MATCH_BONUS;
+                        
                             for (Card *selectedCard in cards) {
                                 selectedCard.matched=YES;
                                 [self.matchInfo appendFormat:@"%@ ",selectedCard.contents];
                             }
+                                self.numberOfSelectedCards=0;
                             [self.matchInfo appendFormat:@"for %d points",matchScore*MATCH_BONUS];
+                           [self.matchInfo appendString:@", Matched!"];
                         }
                         else{
                             self.matchInfo=[NSMutableString stringWithString:@" "];
                             for (Card *selectedCard in cards) {
                                 [self.matchInfo appendFormat:@"%@ ",selectedCard.contents];
                             }
-                            [self.matchInfo appendFormat:@" do not match! lose %d points",MISMATCH_PENALTY];
+                            [self.matchInfo appendFormat:@" do not match! lose %d points", MISMATCH_PENALTY+self.numberOfSelectedCards];
                             //Mismatch, unchose last card, penalty
                             otherCard.chosen= NO;
+                            self.numberOfSelectedCards-=1;
                             self.score -= MISMATCH_PENALTY;
                         }
-                    }
+                }
             }
-           
         }
         self.score -= COST_TO_CHOSE;
         card.chosen=YES;
+        
     }
     }
 }

@@ -7,12 +7,21 @@
 //
 
 #import "CardGameViewController.h"
+#import "HistoryViewController.h"
 
 @interface CardGameViewController ()
-
+@property (strong, nonatomic) NSMutableArray *history;
 @end
 
 @implementation CardGameViewController
+
+-(NSMutableArray *)history{
+    if(!_history){
+        _history=[[NSMutableArray alloc]init];
+    }
+    return _history;
+}
+
 
 -(CardMatchingGame *)game{
     if(!_game){
@@ -48,13 +57,14 @@
 -(void)updateUI{
     [self.matchModeControl setEnabled:![self.game isStarted]];
     
-   self.matchInfoLabel.text=self.game.matchInfo;
+    self.matchInfoLabel.attributedText = [self getGameDescriptionFromString:self.game.matchInfo];
+    [self.history addObject:self.matchInfoLabel.attributedText];
     
     for (UIButton *cardButton in self.cardButtons) {
         NSUInteger index = [self.cardButtons indexOfObject:cardButton]; //card index in view
         //get card at that index in game
         Card *card = [self.game cardAtIndex:index];
-        [cardButton setTitle:[self titleForCard:card]
+        [cardButton setAttributedTitle:[self titleForCard:card]
                     forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                           forState:UIControlStateNormal];
@@ -63,9 +73,20 @@
 
     }
 }
--(NSString *)titleForCard:(Card *)card
+
+
+
+-(NSAttributedString *)getGameDescriptionFromString:(NSString*)description{
+    NSAttributedString *label= [[NSAttributedString alloc] initWithString:description];
+    return  label;
+}
+
+
+-(NSAttributedString *)titleForCard:(Card *)card
 {
-    return card.isChosen ? card.contents : @"";
+    NSString *title= card.isChosen ? card.contents : @"";
+    return[[NSAttributedString alloc] initWithString:title];
+   
 }
 
 -(UIImage *)backgroundImageForCard:(Card *)card
@@ -78,4 +99,14 @@
 -(Deck *)createDeck{ //abstract
     return nil;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"History"] || [segue.identifier isEqualToString:@"History2"]){
+        if([segue.destinationViewController isKindOfClass:[HistoryViewController class]]){
+            HistoryViewController *historyVC = (HistoryViewController *)segue.destinationViewController;
+            historyVC.history=self.history;    //do stuff.
+        }
+    }
+}
+
 @end

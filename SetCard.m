@@ -13,9 +13,8 @@
 @synthesize color = _color, symbol = _symbol, shading = _shading;
 
 - (NSString *)contents{
-    return [NSString stringWithFormat:@"%@:%@:%@:%d", self.symbol, self.color, self.shading, self.number];
+    return [NSString stringWithFormat:@" :%@:%@:%@:%d: ", self.symbol, self.color, self.shading, self.number];
 }
-
 
 - (void)setNumber:(NSUInteger)number{
     if (number <= [SetCard maxNumber]){

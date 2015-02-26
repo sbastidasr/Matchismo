@@ -21,25 +21,32 @@
     return [[SetCardDeck alloc] init];
 }
 
--(void)updateUI{
-    [self.matchModeControl setEnabled:![self.game isStarted]];
+
+
+-(NSAttributedString *)getGameDescriptionFromString:(NSString*)description{
+    NSLog(@"%@",description);
+    NSArray *cards = [description componentsSeparatedByString:@":"];
     
-    self.matchInfoLabel.text=self.game.matchInfo;
     
-    for (UIButton *cardButton in self.cardButtons) {
-        NSUInteger index = [self.cardButtons indexOfObject:cardButton]; //card index in view
-        //get card at that index in game
-        Card *card = [self.game cardAtIndex:index];
+    NSUInteger numberOfCards = ([cards count]-1)/5;
+    NSMutableAttributedString *label = [[NSMutableAttributedString alloc]init];
+    
+    for (int i=0; i<numberOfCards; i++){
         
-        
-        [cardButton setAttributedTitle:[self titleForCard:card]
-                              forState:UIControlStateNormal];
-        [cardButton setBackgroundImage:[self backgroundImageForCard:card]
-                              forState:UIControlStateNormal];
-        cardButton.enabled = !card.isMatched;
-        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-        
+    SetCard *setCard = [[SetCard alloc]init];
+       
+    setCard.symbol=cards[1+(i*5)];
+    setCard.color=cards[2+(i*5)];
+    setCard.shading=cards[3+(i*5)];
+    setCard.number=[cards[4+(i*5)] integerValue];
+    [label appendAttributedString: [self titleForCard:setCard]];
     }
+     NSMutableAttributedString *labelEnd= [[NSAttributedString alloc] initWithString:[cards lastObject]] ;
+    
+    if(labelEnd){
+    [label appendAttributedString: labelEnd];
+    }
+     return  label;
 }
 
 -(UIImage *)backgroundImageForCard:(Card *)card
@@ -48,9 +55,6 @@
 }
 
 
-
-
-//edit this method!!!!!
 - (NSAttributedString *)titleForCard:(SetCard *)setCard
 {
     NSString *symbol = @"";

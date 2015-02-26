@@ -15,13 +15,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="gFD-iL-zZX"/>
-                        <segue destination="RHf-is-Na9" kind="relationship" relationship="viewControllers" id="EdL-yq-KVK"/>
+                        <segue destination="TBR-A0-ZAr" kind="relationship" relationship="viewControllers" id="gFD-iL-zZX"/>
+                        <segue destination="emN-pR-UGd" kind="relationship" relationship="viewControllers" id="EdL-yq-KVK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-io-Tj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1380" y="230"/>
+            <point key="canvasLocation" x="-960" y="546"/>
         </scene>
         <!--PlayingCardGame-->
         <scene sceneID="ufC-wZ-h7g">
@@ -41,7 +41,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="489" width="368" height="21"/>
+                                    <rect key="frame" x="16" y="488" width="368" height="21"/>
                                 </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3n1-eS-VMA">
@@ -52,7 +52,7 @@
                                     <segment title="3 Card"/>
                                 </segments>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="129" y="482" width="111" height="29"/>
+                                    <rect key="frame" x="113" y="481" width="111" height="29"/>
                                 </variation>
                                 <connections>
                                     <action selector="changeMatchMode:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bCp-s3-GDv"/>
@@ -65,21 +65,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="485" width="76" height="30"/>
+                                    <rect key="frame" x="240" y="484" width="76" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="newGameButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oPY-5S-MpK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-uF-d5F">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="525" width="368" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOQ-zo-zgS">
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -88,7 +79,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lUS-nv-pGf"/>
@@ -102,7 +93,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UmG-gY-0Vc"/>
@@ -116,7 +107,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u25-aa-FNR"/>
@@ -130,7 +121,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nY0-e2-puY"/>
@@ -144,7 +135,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MHK-sA-7Un"/>
@@ -158,7 +149,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IYe-63-rhU"/>
@@ -172,7 +163,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kiq-NU-5Rv"/>
@@ -186,7 +177,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YSi-QQ-Zyb"/>
@@ -200,7 +191,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hC0-TR-kn0"/>
@@ -214,7 +205,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sbj-Ag-FH9"/>
@@ -228,7 +219,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GxO-eh-8Xc"/>
@@ -242,7 +233,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tUN-Hx-LpB"/>
@@ -256,7 +247,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vtR-TF-axH"/>
@@ -270,7 +261,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j3W-EH-pAR"/>
@@ -284,7 +275,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Sud-Sl-vF3"/>
@@ -298,7 +289,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cCK-RN-NPs"/>
@@ -312,7 +303,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hU8-hN-PXK"/>
@@ -326,7 +317,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ujD-ok-0b9"/>
@@ -340,7 +331,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xrq-NN-jB8"/>
@@ -354,7 +345,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LKS-p8-QA7"/>
@@ -368,7 +359,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZnT-LQ-ZxE"/>
@@ -382,7 +373,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FDm-h7-oE4"/>
@@ -396,7 +387,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8be-Q2-YR2"/>
@@ -410,7 +401,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cHW-R5-c0K"/>
@@ -424,7 +415,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BHT-hB-Lcy"/>
@@ -438,7 +429,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="80" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8vR-7Q-TeP"/>
@@ -452,7 +443,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="158" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gev-sp-jr3"/>
@@ -466,7 +457,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="236" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wpD-dW-LMr"/>
@@ -480,7 +471,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="314" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B0c-aU-dfA"/>
@@ -494,12 +485,21 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="380" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="392" width="50" height="70"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HnG-7T-RCl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-uF-d5F">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="522" width="368" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -507,7 +507,6 @@
                                 <exclude reference="vJr-9j-Kh8"/>
                                 <exclude reference="3n1-eS-VMA"/>
                                 <exclude reference="kVu-2R-3rM"/>
-                                <exclude reference="tdx-uF-d5F"/>
                                 <exclude reference="Yxa-dl-94d"/>
                                 <exclude reference="U6s-o7-Dur"/>
                                 <exclude reference="xI6-6W-XVT"/>
@@ -537,6 +536,7 @@
                                 <exclude reference="XM5-DG-y4c"/>
                                 <exclude reference="CdX-RD-cx0"/>
                                 <exclude reference="TVu-gm-A58"/>
+                                <exclude reference="tdx-uF-d5F"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -544,7 +544,6 @@
                                 <include reference="vJr-9j-Kh8"/>
                                 <include reference="3n1-eS-VMA"/>
                                 <include reference="kVu-2R-3rM"/>
-                                <include reference="tdx-uF-d5F"/>
                                 <include reference="Yxa-dl-94d"/>
                                 <include reference="U6s-o7-Dur"/>
                                 <include reference="xI6-6W-XVT"/>
@@ -574,10 +573,17 @@
                                 <include reference="XM5-DG-y4c"/>
                                 <include reference="CdX-RD-cx0"/>
                                 <include reference="TVu-gm-A58"/>
+                                <include reference="tdx-uF-d5F"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="j12-eR-WIo"/>
+                    <navigationItem key="navigationItem" id="vsD-vY-8gq">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="gnd-Rr-L8f">
+                            <connections>
+                                <segue destination="1ST-Qv-xkg" kind="show" identifier="History" id="uFF-cW-ugW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="matchInfoLabel" destination="tdx-uF-d5F" id="GKo-pW-NEE"/>
                         <outlet property="matchModeControl" destination="3n1-eS-VMA" id="LNm-xc-5K1"/>
@@ -616,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1141.5" y="1214"/>
+            <point key="canvasLocation" x="871.5" y="1038"/>
         </scene>
         <!--SetGame-->
         <scene sceneID="JOc-7G-pUf">
@@ -636,7 +642,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="489" width="368" height="21"/>
+                                    <rect key="frame" x="16" y="450" width="368" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tz-DB-9KV">
@@ -646,21 +652,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="485" width="76" height="30"/>
+                                    <rect key="frame" x="248" y="450" width="76" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="newGameButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="LTA-Cu-Qm4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z9-UA-rSl">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="525" width="368" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ9-Gh-NbQ">
                                 <rect key="frame" x="277" y="285" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -669,7 +666,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="PNA-Ee-2yj"/>
@@ -683,7 +680,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="jQL-ae-dFz"/>
@@ -697,7 +694,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="3QO-YJ-2j8"/>
@@ -711,7 +708,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="RAl-Hp-X7U"/>
@@ -725,7 +722,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="b7T-bp-XTF"/>
@@ -739,7 +736,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="fLw-YQ-j7W"/>
@@ -753,7 +750,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="IOK-nF-fie"/>
@@ -767,7 +764,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="g0l-GI-lEL"/>
@@ -781,7 +778,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="nYw-f6-gAl"/>
@@ -795,7 +792,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="7Bq-8f-h4C"/>
@@ -809,7 +806,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="OxR-lc-TU1"/>
@@ -823,7 +820,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="cQo-Jl-2gF"/>
@@ -837,7 +834,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="uKO-T1-8OS"/>
@@ -851,7 +848,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="Rxd-1y-odF"/>
@@ -865,7 +862,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="JKQ-lM-2VD"/>
@@ -879,7 +876,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="16" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="F41-RK-zAW"/>
@@ -893,7 +890,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="75" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="94K-WT-XCi"/>
@@ -907,7 +904,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="133" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="133" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="28I-ee-S1e"/>
@@ -921,7 +918,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="191" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="2TT-6q-fMV"/>
@@ -935,7 +932,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="248" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="248" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="JW9-LQ-Cpl"/>
@@ -949,7 +946,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="28" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="77" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="gh7-4x-gX1"/>
@@ -963,7 +960,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="116" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="165" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="bAK-TC-TnN"/>
@@ -977,7 +974,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="204" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="253" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="hxT-m0-NSE"/>
@@ -991,19 +988,27 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="306" y="292" width="50" height="80"/>
+                                    <rect key="frame" x="306" y="341" width="50" height="80"/>
                                 </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="aFa-mW-5vh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z9-UA-rSl">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="479" width="307" height="64"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3Hz-b1-BxA"/>
                                 <exclude reference="3Tz-DB-9KV"/>
-                                <exclude reference="4z9-UA-rSl"/>
                                 <exclude reference="z9C-Lg-S4M"/>
                                 <exclude reference="ifl-fo-kaw"/>
                                 <exclude reference="pUP-as-AEs"/>
@@ -1027,13 +1032,13 @@
                                 <exclude reference="mrh-ph-wWm"/>
                                 <exclude reference="BqK-VU-QLN"/>
                                 <exclude reference="nbq-TJ-kBA"/>
+                                <exclude reference="4z9-UA-rSl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3Hz-b1-BxA"/>
                                 <include reference="3Tz-DB-9KV"/>
-                                <include reference="4z9-UA-rSl"/>
                                 <include reference="z9C-Lg-S4M"/>
                                 <include reference="ifl-fo-kaw"/>
                                 <include reference="pUP-as-AEs"/>
@@ -1057,10 +1062,17 @@
                                 <include reference="mrh-ph-wWm"/>
                                 <include reference="BqK-VU-QLN"/>
                                 <include reference="nbq-TJ-kBA"/>
+                                <include reference="4z9-UA-rSl"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="w6A-Zv-O5W"/>
+                    <navigationItem key="navigationItem" id="KD0-cT-Dp1">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="Ode-kJ-5PM">
+                            <connections>
+                                <segue destination="1ST-Qv-xkg" kind="show" identifier="History2" id="QGV-UU-Sb7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="matchInfoLabel" destination="4z9-UA-rSl" id="CZR-Ds-AwF"/>
                         <outlet property="scoreLabel" destination="3Hz-b1-BxA" id="MdJ-mk-yew"/>
@@ -1092,10 +1104,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6q-kv-XM3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.5" y="926"/>
+            <point key="canvasLocation" x="853.5" y="220"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="ofB-Bx-bDB">
+            <objects>
+                <viewController id="1ST-Qv-xkg" customClass="HistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eIJ-7i-ddn"/>
+                        <viewControllerLayoutGuide type="bottom" id="wDf-Z5-v8H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m7b-7Y-nps">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-PK-tAb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="22" y="64" width="373" height="479"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="RH5-PK-tAb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="RH5-PK-tAb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="historyTextView" destination="RH5-PK-tAb" id="UYQ-sl-vnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vp-Vc-9ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.5" y="546"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="s5X-7u-ocU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TBR-A0-ZAr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="j12-eR-WIo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lpa-ht-UFa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="gDa-0S-LaO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-hj-iME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4.5" y="934"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="C6Q-52-9zb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="emN-pR-UGd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="w6A-Zv-O5W"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ftY-9G-Mft">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RHf-is-Na9" kind="relationship" relationship="rootViewController" id="8Vi-Da-ta9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSb-fl-XC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.5" y="202"/>
         </scene>
     </scenes>
     <resources>
         <image name="cardBack" width="64" height="96"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QGV-UU-Sb7"/>
+    </inferredMetricsTieBreakers>
 </document>

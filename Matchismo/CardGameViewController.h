@@ -19,5 +19,6 @@
 
 -(Deck *)createDeck;
 -(UIImage *)backgroundImageForCard:(Card *)card;
+-(void)updateUI;
 @end
 
