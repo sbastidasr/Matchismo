@@ -11,28 +11,25 @@
 
 @implementation SetCardDeck
 
-
- -(instancetype)init{
-     self=[super init]; //init parent classes
-     if(self){//only if parent is init
-         for (NSNumber *suit in [SetCard validValues]) {
-             for (NSNumber *rank in [SetCard validValues]) {
-                 for (NSNumber *shading in [SetCard validValues]) {
-                      for (NSNumber *color in [SetCard validValues]) {
-                          
-                          SetCard *card=[[SetCard alloc]init];
-                          card.number=[suit integerValue];
-                          card.color=[color integerValue];
-                          card.symbol=[rank integerValue];
-                          card.shading=[shading integerValue];
-                          [self addCard:card];
-                          
-                      }
-                 }
-             }
-         }
-     }
-     return self;
- }
-
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        for (NSString *color in [SetCard validColors]) {
+            for (NSString *symbol in [SetCard validSymbols]) {
+                for (NSString *shading in [SetCard validShadings]) {
+                    for (NSUInteger number = 1; number <= [SetCard maxNumber]; number++) {
+                        SetCard *card = [[SetCard alloc] init];
+                        card.color = color;
+                        card.symbol = symbol;
+                        card.shading = shading;
+                        card.number = number;
+                        [self addCard:card atTop:YES];
+                    }
+                }
+            }
+        }
+    }
+    return self;
+}
 @end

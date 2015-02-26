@@ -9,14 +9,16 @@
 #import "Card.h"
 
 @interface SetCard : Card
-@property(nonatomic) NSUInteger number;
-@property(nonatomic) NSUInteger symbol;
-@property(nonatomic) NSUInteger shading;
-@property(nonatomic) NSUInteger color;
+@property (strong, nonatomic) NSString *color;
+@property (strong, nonatomic) NSString *symbol;
+@property (strong, nonatomic) NSString *shading;
+@property (nonatomic) NSUInteger number;
 
-+(NSArray *)validValues;
++ (NSArray *)validColors;
++ (NSArray *)validSymbols;
++ (NSArray *)validShadings;
++ (NSUInteger)maxNumber;
 
 
-//+(NSUInteger) maxRanks;
 
 @end

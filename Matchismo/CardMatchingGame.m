@@ -17,12 +17,14 @@
 @implementation CardMatchingGame
 
 
+
 -(NSMutableArray *)cards{
     if (!_cards){
         _cards= [[NSMutableArray alloc]init];
     }
      return _cards;
 }
+
 -(NSInteger)matchNumber{
     if(!_matchNumber){
         _matchNumber=2;
