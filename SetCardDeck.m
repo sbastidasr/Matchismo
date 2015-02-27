@@ -11,8 +11,7 @@
 
 @implementation SetCardDeck
 
-- (id)init
-{
+- (id)init{
     self = [super init];
     if (self) {
         for (NSString *color in [SetCard validColors]) {

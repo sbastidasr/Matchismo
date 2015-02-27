@@ -12,13 +12,25 @@
 
 @implementation PlayingCard
 
+#pragma mark - utilities
++(NSUInteger) maxRanks{
+    return [[self rankStrings] count]-1;
+}
+
++(NSArray *)validSuits{
+    return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
+}
++(NSArray *)rankStrings{
+    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
+}
+
+#pragma mark - Methods
 -(NSString *)contents{
     NSArray *rankStrings=[PlayingCard rankStrings];
     return [rankStrings[self.rank] stringByAppendingString:self.suit];
 }
 
-//Getters+setters
-
+#pragma mark - Getters & Setters
 @synthesize suit=_suit;//because we provide getter and setter.
 
 - (void)setSuit:(NSString *)suit
@@ -29,8 +41,7 @@
     }
 }
 
--(NSString *)suit
-{
+-(NSString *)suit{
     return _suit ? _suit : @"?";//if ? talcaosa; elsetalcosa
 }
 
@@ -66,18 +77,6 @@
         score += 1*([suitsCountedSet countForObject:suit]-1);
     }
     return score;
-}
-
-//Utilities are class methods.
-+(NSUInteger) maxRanks{
-    return [[self rankStrings] count]-1;
-}
-
-+(NSArray *)validSuits{
-    return @[@"♠︎",@"♣︎",@"♥︎",@"♦︎"];
-}
-+(NSArray *)rankStrings{
-    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"];
 }
 
 @end

@@ -10,8 +10,6 @@
 
 @implementation HistoryViewController
 
-
-
 -(void)viewDidAppear:(BOOL)animated{
     NSMutableAttributedString *logs = [[NSMutableAttributedString alloc]init];
     for (NSAttributedString *log in self.history){

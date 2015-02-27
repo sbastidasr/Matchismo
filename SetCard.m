@@ -10,6 +10,24 @@
 
 @implementation SetCard
 
+#pragma mark - ClassMethods
++ (NSArray *)validColors{
+    return @[@"red", @"green", @"purple"];
+}
+
++ (NSArray *)validSymbols{
+    return @[@"oval", @"squiggle", @"diamond"];
+}
+
++ (NSArray *)validShadings{
+    return @[@"solid", @"open", @"striped"];
+}
+
++ (NSUInteger)maxNumber{
+    return 3;
+}
+
+#pragma mark - Getters & Setters
 @synthesize color = _color, symbol = _symbol, shading = _shading;
 
 - (NSString *)contents{
@@ -43,24 +61,7 @@
     if ([[SetCard validShadings] containsObject:shading]) _shading = shading;
 }
 
-
-#pragma mark ClassMethods
-+ (NSArray *)validColors{
-    return @[@"red", @"green", @"purple"];
-}
-
-+ (NSArray *)validSymbols{
-    return @[@"oval", @"squiggle", @"diamond"];
-}
-
-+ (NSArray *)validShadings{
-    return @[@"solid", @"open", @"striped"];
-}
-
-+ (NSUInteger)maxNumber{
-    return 3;
-}
-
+#pragma mark - Methods
 
 - (int)match:(NSArray *)otherCards{
     int score = 0;
@@ -95,10 +96,6 @@
     }
     return score;
 }
-
-
-
-
 
 @end
 

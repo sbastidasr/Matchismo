@@ -10,10 +10,13 @@
 
 //Extension.
 @interface CardMatchingGame()
+
 @property(nonatomic) NSInteger score;//make the already defined property readwrite
 @property(nonatomic) NSMutableArray *cards; //of cards. This one is related to the cards available in the UI. 12 in this case because UI has 12 dards.NOT the deck@end
 @property (nonatomic) NSInteger numberOfSelectedCards;
+
 @end
+
 
 @implementation CardMatchingGame
 
@@ -23,7 +26,6 @@
     }
     return self;
 }
-
 
 -(NSMutableArray *)cards{
     if (!_cards){
@@ -130,13 +132,9 @@ static const int COST_TO_CHOSE = 1;
     }
 }
 
-
-
 -(Card *)cardAtIndex:(NSUInteger) index{
             //if index is in bounds         do this         else nil
     return (index<[self.cards count]) ? self.cards[index] : nil;
 }
-
-
 
 @end

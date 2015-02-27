@@ -18,15 +18,13 @@
 }
 
 - (Deck *)createDeck{
+    self.gameType = @"Set Cards";
     return [[SetCardDeck alloc] init];
 }
-
-
 
 -(NSAttributedString *)getGameDescriptionFromString:(NSString*)description{
     NSLog(@"%@",description);
     NSArray *cards = [description componentsSeparatedByString:@":"];
-    
     
     NSUInteger numberOfCards = ([cards count]-1)/5;
     NSMutableAttributedString *label = [[NSMutableAttributedString alloc]init];
@@ -49,14 +47,11 @@
      return  label;
 }
 
--(UIImage *)backgroundImageForCard:(Card *)card
-{
+-(UIImage *)backgroundImageForCard:(Card *)card{
     return [UIImage imageNamed:card.isChosen ? @"cardSelected"  : @"cardFront" ];
 }
 
-
-- (NSAttributedString *)titleForCard:(SetCard *)setCard
-{
+- (NSAttributedString *)titleForCard:(SetCard *)setCard{
     NSString *symbol = @"";
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
 
@@ -91,8 +86,5 @@
     [attributes setObject:newFont forKey:NSFontAttributeName ];
     return [[NSMutableAttributedString alloc] initWithString:symbol  attributes:attributes];
 }
-
-
-
 
 @end

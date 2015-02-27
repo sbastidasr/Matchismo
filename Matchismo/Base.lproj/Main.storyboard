@@ -17,11 +17,12 @@
                     <connections>
                         <segue destination="TBR-A0-ZAr" kind="relationship" relationship="viewControllers" id="gFD-iL-zZX"/>
                         <segue destination="emN-pR-UGd" kind="relationship" relationship="viewControllers" id="EdL-yq-KVK"/>
+                        <segue destination="f38-mT-uHZ" kind="relationship" relationship="viewControllers" id="Luf-7h-J8k"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-io-Tj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-960" y="546"/>
+            <point key="canvasLocation" x="-981" y="934"/>
         </scene>
         <!--PlayingCardGame-->
         <scene sceneID="ufC-wZ-h7g">
@@ -1115,6 +1116,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wDf-Z5-v8H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m7b-7Y-nps">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-PK-tAb">
@@ -1165,6 +1167,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOh-hj-iME" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4.5" y="934"/>
+        </scene>
+        <!--HighScores-->
+        <scene sceneID="Kdi-na-mgv">
+            <objects>
+                <viewController title="HighScores" id="f38-mT-uHZ" customClass="GameResultsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1XP-Gu-djP"/>
+                        <viewControllerLayoutGuide type="bottom" id="i3T-ep-qJw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z8D-GY-aWo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DX6-kY-AMe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DX6-kY-AMe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DX6-kY-AMe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8dI-KS-yC9"/>
+                    <connections>
+                        <outlet property="scoresTextView" destination="DX6-kY-AMe" id="IbX-dF-6Qg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYI-E4-npu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.5" y="2010"/>
         </scene>
         <!--Item-->
         <scene sceneID="C6Q-52-9zb">

@@ -14,7 +14,4 @@
 - (NSAttributedString *)titleForCard:(Card *)card;
 - (UIImage *)backgroundImageForCard:(Card *)card;
 
-
-
-+(NSArray *)symbolsArray;
 @end

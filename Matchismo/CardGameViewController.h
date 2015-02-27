@@ -11,14 +11,17 @@
 #import "CardMatchingGame.h"
 
 @interface CardGameViewController : UIViewController
+
 @property (nonatomic,strong) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *matchModeControl;
 @property (weak, nonatomic) IBOutlet UILabel *matchInfoLabel;
+@property (strong, nonatomic) NSString *gameType;
 
 -(Deck *)createDeck;
 -(UIImage *)backgroundImageForCard:(Card *)card;
 -(void)updateUI;
+
 @end
 

@@ -8,12 +8,25 @@
 
 #import "CardGameViewController.h"
 #import "HistoryViewController.h"
+#import "GameResult.h"
 
 @interface CardGameViewController ()
+
 @property (strong, nonatomic) NSMutableArray *history;
+@property (strong, nonatomic) GameResult *gameResult;
+
 @end
 
+
 @implementation CardGameViewController
+
+- (GameResult *)gameResult{
+    if (!_gameResult){
+        _gameResult = [[GameResult alloc] init];
+    }
+    _gameResult.gameType = self.gameType;
+    return _gameResult;
+}
 
 -(NSMutableArray *)history{
     if(!_history){
@@ -21,7 +34,6 @@
     }
     return _history;
 }
-
 
 -(CardMatchingGame *)game{
     if(!_game){
@@ -34,7 +46,6 @@
     self.game.matchNumber=sender.selectedSegmentIndex+2;
 }
 
-
 - (IBAction)touchCardButton:(UIButton *)sender {
   //the model now handles what happens when selecting a card.
     
@@ -46,12 +57,13 @@
     
     //controller has to update what happened in the game.
     [self updateUI];
-  
 }
+
 - (IBAction)newGameButton:(UIButton *)sender {
     self.game = nil;
      self.game =[self game];
     [self updateUI];
+    self.gameResult = nil;
 }
 
 -(void)updateUI{
@@ -69,32 +81,25 @@
         [cardButton setBackgroundImage:[self backgroundImageForCard:card]
                           forState:UIControlStateNormal];
         cardButton.enabled = !card.isMatched;
+        
         self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-
+        self.gameResult.score = self.game.score;
     }
 }
-
-
 
 -(NSAttributedString *)getGameDescriptionFromString:(NSString*)description{
     NSAttributedString *label= [[NSAttributedString alloc] initWithString:description];
     return  label;
 }
 
-
--(NSAttributedString *)titleForCard:(Card *)card
-{
+-(NSAttributedString *)titleForCard:(Card *)card{
     NSString *title= card.isChosen ? card.contents : @"";
     return[[NSAttributedString alloc] initWithString:title];
-   
 }
 
--(UIImage *)backgroundImageForCard:(Card *)card
-{
+-(UIImage *)backgroundImageForCard:(Card *)card{
     return [UIImage imageNamed:card.isChosen ? @"cardFront"  : @"cardBack" ];
 }
-
-
 
 -(Deck *)createDeck{ //abstract
     return nil;
