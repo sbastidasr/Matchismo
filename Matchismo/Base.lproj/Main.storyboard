@@ -1190,16 +1190,58 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9t-Qi-CGI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sort by Date">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="513" width="86" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sortByDate:" destination="f38-mT-uHZ" eventType="touchUpInside" id="XAO-C6-jn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-3B-e8U">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="by Duration">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="513" width="80" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sortByDuration:" destination="f38-mT-uHZ" eventType="touchUpInside" id="XhR-R5-1cv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jP-8d-858">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="by Score">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="176" y="513" width="61" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sortByScore:" destination="f38-mT-uHZ" eventType="touchUpInside" id="9Z3-nQ-jBk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="DX6-kY-AMe"/>
+                                <exclude reference="T9t-Qi-CGI"/>
+                                <exclude reference="Ddv-3B-e8U"/>
+                                <exclude reference="4jP-8d-858"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="DX6-kY-AMe"/>
+                                <include reference="T9t-Qi-CGI"/>
+                                <include reference="Ddv-3B-e8U"/>
+                                <include reference="4jP-8d-858"/>
                             </mask>
                         </variation>
                     </view>
@@ -1230,6 +1272,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSb-fl-XC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.5" y="202"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Xv-Ou-Bln">
+            <objects>
+                <viewController id="P97-H9-0Ut" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J9k-VR-h6o"/>
+                        <viewControllerLayoutGuide type="bottom" id="KiP-cy-um7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qF6-ZO-76Z">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxI-is-bNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

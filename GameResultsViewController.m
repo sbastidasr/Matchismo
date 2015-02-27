@@ -48,5 +48,17 @@
                                             value:color
                                             range:range];
 }
+- (IBAction)sortByDate:(id)sender {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareDate:)];
+    [self updateUI];
+}
+- (IBAction)sortByScore:(id)sender {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareScore:)];
+    [self updateUI];
+}
+- (IBAction)sortByDuration:(id)sender {
+    self.scores = [self.scores sortedArrayUsingSelector:@selector(compareDuration:)];
+    [self updateUI];
+}
 
 @end

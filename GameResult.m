@@ -41,9 +41,10 @@ static NSString *const GAME_KEY =  @"Game";
 
 - (void)synchronize{
     NSMutableDictionary *mutableGameResultsFromUserDefaults = [[[NSUserDefaults standardUserDefaults] dictionaryForKey:ALL_RESULTS_KEY] mutableCopy];
-    if (!mutableGameResultsFromUserDefaults)
+    if (!mutableGameResultsFromUserDefaults){
         mutableGameResultsFromUserDefaults = [[NSMutableDictionary alloc] init];
-    mutableGameResultsFromUserDefaults[[self.start description]] = [self asPropertyList];
+    }
+    [mutableGameResultsFromUserDefaults setObject:[self asPropertyList] forKey:[self.start description]];
     [[NSUserDefaults standardUserDefaults] setObject:mutableGameResultsFromUserDefaults
                                               forKey:ALL_RESULTS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -92,5 +93,8 @@ static NSString *const GAME_KEY =  @"Game";
 
 - (NSComparisonResult)compareDuration:(GameResult *)result{
     return [@(self.duration) compare:@(result.duration)];
+}
+- (NSComparisonResult)compareDate:(GameResult *)result{
+    return [self.end compare:result.end];
 }
 @end
