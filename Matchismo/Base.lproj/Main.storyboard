@@ -492,15 +492,6 @@
                                     <action selector="touchCardButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HnG-7T-RCl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdx-uF-d5F">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="522" width="368" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -537,7 +528,6 @@
                                 <exclude reference="XM5-DG-y4c"/>
                                 <exclude reference="CdX-RD-cx0"/>
                                 <exclude reference="TVu-gm-A58"/>
-                                <exclude reference="tdx-uF-d5F"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -574,19 +564,13 @@
                                 <include reference="XM5-DG-y4c"/>
                                 <include reference="CdX-RD-cx0"/>
                                 <include reference="TVu-gm-A58"/>
-                                <include reference="tdx-uF-d5F"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="vsD-vY-8gq">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="gnd-Rr-L8f">
-                            <connections>
-                                <segue destination="1ST-Qv-xkg" kind="show" identifier="History" id="uFF-cW-ugW"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="gnd-Rr-L8f"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="matchInfoLabel" destination="tdx-uF-d5F" id="GKo-pW-NEE"/>
                         <outlet property="matchModeControl" destination="3n1-eS-VMA" id="LNm-xc-5K1"/>
                         <outlet property="scoreLabel" destination="vJr-9j-Kh8" id="JHv-sc-Xc4"/>
                         <outletCollection property="cardButtons" destination="JOQ-zo-zgS" id="Gqv-Ln-q9o"/>
@@ -623,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871.5" y="1038"/>
+            <point key="canvasLocation" x="1073" y="1276"/>
         </scene>
         <!--SetGame-->
         <scene sceneID="JOc-7G-pUf">
@@ -995,15 +979,6 @@
                                     <action selector="touchCardButton:" destination="RHf-is-Na9" eventType="touchUpInside" id="aFa-mW-5vh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z9-UA-rSl">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="31" y="479" width="307" height="64"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -1033,7 +1008,6 @@
                                 <exclude reference="mrh-ph-wWm"/>
                                 <exclude reference="BqK-VU-QLN"/>
                                 <exclude reference="nbq-TJ-kBA"/>
-                                <exclude reference="4z9-UA-rSl"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1063,19 +1037,13 @@
                                 <include reference="mrh-ph-wWm"/>
                                 <include reference="BqK-VU-QLN"/>
                                 <include reference="nbq-TJ-kBA"/>
-                                <include reference="4z9-UA-rSl"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KD0-cT-Dp1">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="Ode-kJ-5PM">
-                            <connections>
-                                <segue destination="1ST-Qv-xkg" kind="show" identifier="History2" id="QGV-UU-Sb7"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="History" id="Ode-kJ-5PM"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="matchInfoLabel" destination="4z9-UA-rSl" id="CZR-Ds-AwF"/>
                         <outlet property="scoreLabel" destination="3Hz-b1-BxA" id="MdJ-mk-yew"/>
                         <outletCollection property="cardButtons" destination="SQ9-Gh-NbQ" id="1SA-fB-ynU"/>
                         <outletCollection property="cardButtons" destination="z9C-Lg-S4M" id="XIB-Sv-gnC"/>
@@ -1105,49 +1073,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6q-kv-XM3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.5" y="220"/>
-        </scene>
-        <!--History View Controller-->
-        <scene sceneID="ofB-Bx-bDB">
-            <objects>
-                <viewController id="1ST-Qv-xkg" customClass="HistoryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eIJ-7i-ddn"/>
-                        <viewControllerLayoutGuide type="bottom" id="wDf-Z5-v8H"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m7b-7Y-nps">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-PK-tAb">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="64" width="373" height="479"/>
-                                </variation>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="RH5-PK-tAb"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="RH5-PK-tAb"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="historyTextView" destination="RH5-PK-tAb" id="UYQ-sl-vnh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vp-Vc-9ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2005.5" y="546"/>
+            <point key="canvasLocation" x="886.5" y="240"/>
         </scene>
         <!--Item-->
         <scene sceneID="s5X-7u-ocU">
@@ -1273,27 +1199,8 @@
             </objects>
             <point key="canvasLocation" x="13.5" y="202"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6Xv-Ou-Bln">
-            <objects>
-                <viewController id="P97-H9-0Ut" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J9k-VR-h6o"/>
-                        <viewControllerLayoutGuide type="bottom" id="KiP-cy-um7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qF6-ZO-76Z">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pxI-is-bNe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="cardBack" width="64" height="96"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="QGV-UU-Sb7"/>
-    </inferredMetricsTieBreakers>
 </document>

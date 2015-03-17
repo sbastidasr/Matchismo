@@ -69,8 +69,8 @@
 -(void)updateUI{
     [self.matchModeControl setEnabled:![self.game isStarted]];
     
-    self.matchInfoLabel.attributedText = [self getGameDescriptionFromString:self.game.matchInfo];
-    [self.history addObject:self.matchInfoLabel.attributedText];
+  //  self.matchInfoLabel.attributedText = [self getGameDescriptionFromString:self.game.matchInfo];
+    //[self.history addObject:self.matchInfoLabel.attributedText];
     
     for (UIButton *cardButton in self.cardButtons) {
         NSUInteger index = [self.cardButtons indexOfObject:cardButton]; //card index in view
