@@ -1,19 +1,15 @@
 //
 //  PlayingCardView.h
-//  SuperCard
+//  Matchismo
 //
-//  Created by Sebastian Bastidas on 3/6/15.
+//  Created by Sebastian Bastidas on 3/18/15.
 //  Copyright (c) 2015 sbastidasr. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CardView.h"
 
-@interface PlayingCardView : UIView
-
+@interface PlayingCardView : CardView
 @property (nonatomic) NSUInteger rank;
 @property (strong, nonatomic) NSString *suit;
-@property (nonatomic) BOOL faceUp;
-
--(void)pinch:(UIPinchGestureRecognizer *)gesture;
 
 @end

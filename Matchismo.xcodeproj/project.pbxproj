@@ -16,6 +16,7 @@
 		EAB86CAE1A9CBE6600042496 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB86CAD1A9CBE6600042496 /* SetCardDeck.m */; };
 		EAB86CB11A9CBEEA00042496 /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB86CB01A9CBEEA00042496 /* SetGameViewController.m */; };
 		EAB86CB41A9CD1CD00042496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB86CB21A9CD1CD00042496 /* Main.storyboard */; };
+		EAE157E71ABC72D600E55150 /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE157E61ABC72D600E55150 /* SetCardView.m */; };
 		EAE48A8D1A84FE190086F0B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48A8C1A84FE190086F0B6 /* main.m */; };
 		EAE48A901A84FE190086F0B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48A8F1A84FE190086F0B6 /* AppDelegate.m */; };
 		EAE48A931A84FE190086F0B6 /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48A921A84FE190086F0B6 /* CardGameViewController.m */; };
@@ -26,7 +27,9 @@
 		EAE48AB51A84FFEC0086F0B6 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48AB41A84FFEC0086F0B6 /* Deck.m */; };
 		EAE48ABB1A851B070086F0B6 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48ABA1A851B070086F0B6 /* PlayingCardDeck.m */; };
 		EAE48AC71A86787A0086F0B6 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE48AC61A86787A0086F0B6 /* CardMatchingGame.m */; };
-		EAF5D5651AB8F00B00C24938 /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5D5641AB8F00B00C24938 /* PlayingCardView.m */; };
+		EAF5D5651AB8F00B00C24938 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5D5641AB8F00B00C24938 /* CardView.m */; };
+		EAF5D5681AB9A6B600C24938 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5D5661AB9A6B600C24938 /* Grid.m */; };
+		EAF5D5721AB9C57300C24938 /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF5D5711AB9C57300C24938 /* PlayingCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,8 @@
 		EAB86CAF1A9CBEEA00042496 /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGameViewController.h; sourceTree = "<group>"; };
 		EAB86CB01A9CBEEA00042496 /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGameViewController.m; sourceTree = "<group>"; };
 		EAB86CB31A9CD1CD00042496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Matchismo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAE157E51ABC72D600E55150 /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardView.h; sourceTree = "<group>"; };
+		EAE157E61ABC72D600E55150 /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardView.m; sourceTree = "<group>"; };
 		EAE48A871A84FE190086F0B6 /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE48A8B1A84FE190086F0B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAE48A8C1A84FE190086F0B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,8 +82,12 @@
 		EAE48ABA1A851B070086F0B6 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
 		EAE48AC51A86787A0086F0B6 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = Matchismo/CardMatchingGame.h; sourceTree = "<group>"; };
 		EAE48AC61A86787A0086F0B6 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = Matchismo/CardMatchingGame.m; sourceTree = "<group>"; };
-		EAF5D5631AB8F00A00C24938 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
-		EAF5D5641AB8F00B00C24938 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
+		EAF5D5631AB8F00A00C24938 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		EAF5D5641AB8F00B00C24938 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		EAF5D5661AB9A6B600C24938 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		EAF5D5671AB9A6B600C24938 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		EAF5D5701AB9C57300C24938 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
+		EAF5D5711AB9C57300C24938 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +150,7 @@
 				EAB86CAB1A9C1F1500042496 /* Controllers */,
 				EAE48AC41A852BCF0086F0B6 /* Model */,
 				EAE48A971A84FE190086F0B6 /* Images.xcassets */,
+				EAB86CB21A9CD1CD00042496 /* Main.storyboard */,
 				EAE48A991A84FE190086F0B6 /* LaunchScreen.xib */,
 				EAE48A8A1A84FE190086F0B6 /* Supporting Files */,
 			);
@@ -192,7 +202,6 @@
 				EAE48ABA1A851B070086F0B6 /* PlayingCardDeck.m */,
 				EAE48AC51A86787A0086F0B6 /* CardMatchingGame.h */,
 				EAE48AC61A86787A0086F0B6 /* CardMatchingGame.m */,
-				EAB86CB21A9CD1CD00042496 /* Main.storyboard */,
 				EA77FD821AA0C1EB001382A8 /* GameResult.h */,
 				EA77FD831AA0C1EB001382A8 /* GameResult.m */,
 			);
@@ -203,8 +212,14 @@
 		EAF5D5621AB8F00100C24938 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EAF5D5631AB8F00A00C24938 /* PlayingCardView.h */,
-				EAF5D5641AB8F00B00C24938 /* PlayingCardView.m */,
+				EAF5D5701AB9C57300C24938 /* PlayingCardView.h */,
+				EAF5D5711AB9C57300C24938 /* PlayingCardView.m */,
+				EAE157E51ABC72D600E55150 /* SetCardView.h */,
+				EAE157E61ABC72D600E55150 /* SetCardView.m */,
+				EAF5D5631AB8F00A00C24938 /* CardView.h */,
+				EAF5D5641AB8F00B00C24938 /* CardView.m */,
+				EAF5D5661AB9A6B600C24938 /* Grid.m */,
+				EAF5D5671AB9A6B600C24938 /* Grid.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -314,13 +329,16 @@
 				EA77FD841AA0C1EB001382A8 /* GameResult.m in Sources */,
 				EAE48A901A84FE190086F0B6 /* AppDelegate.m in Sources */,
 				EAB86CAE1A9CBE6600042496 /* SetCardDeck.m in Sources */,
-				EAF5D5651AB8F00B00C24938 /* PlayingCardView.m in Sources */,
+				EAF5D5651AB8F00B00C24938 /* CardView.m in Sources */,
+				EAF5D5681AB9A6B600C24938 /* Grid.m in Sources */,
 				EAE48AC71A86787A0086F0B6 /* CardMatchingGame.m in Sources */,
 				EAB86CAA1A9C1EFB00042496 /* SetCard.m in Sources */,
+				EAE157E71ABC72D600E55150 /* SetCardView.m in Sources */,
 				EA77FD871AA0C5A9001382A8 /* GameResultsViewController.m in Sources */,
 				EA5325851A9FBD9D005BB3E9 /* HistoryViewController.m in Sources */,
 				EAE48ABB1A851B070086F0B6 /* PlayingCardDeck.m in Sources */,
 				EAE48A8D1A84FE190086F0B6 /* main.m in Sources */,
+				EAF5D5721AB9C57300C24938 /* PlayingCardView.m in Sources */,
 				EA2976C21A8BC5C600E8B77C /* PlayingCard.m in Sources */,
 				EAE48AB21A84FE450086F0B6 /* Card.m in Sources */,
 				EA360D471A98FEEB00764E7D /* PlayingCardGameViewController.m in Sources */,
@@ -353,6 +371,7 @@
 				EAB86CB31A9CD1CD00042496 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EAE48A991A84FE190086F0B6 /* LaunchScreen.xib */ = {

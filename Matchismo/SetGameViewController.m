@@ -8,12 +8,12 @@
 
 #import "SetGameViewController.h"
 #import "SetCard.h"
+#import "SetCardView.h"
 
 @implementation SetGameViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self updateUI];
     self.game.matchNumber=3;
 }
 
@@ -21,6 +21,34 @@
     self.gameType = @"Set Cards";
     return [[SetCardDeck alloc] init];
 }
+
+- (CardView *)newCardOfGameTypeWithFrame:(CGRect)cardSpace{
+    return [[SetCardView alloc]initWithFrame:cardSpace];
+}
+
+
+-(void)updateUI{
+/*    [self.matchModeControl setEnabled:![self.game isStarted]];
+    
+    for (SetCardView *cardView in self.cardViews) {
+        NSUInteger index = [self.cardViews indexOfObject:cardView]; //card index in view
+        //get card at that index in game
+        SetCard *card = (SetCard *)[self.game cardAtIndex:index];
+        
+        
+        cardView.suit=card.suit;
+        cardView.rank=card.rank;
+        
+        
+        cardView.faceUp = !card.isMatched;
+        
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
+        super.gameResult.score = super.game.score;
+    }*/
+}
+
+
+
 
 -(NSAttributedString *)getGameDescriptionFromString:(NSString*)description{
     NSLog(@"%@",description);
